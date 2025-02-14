@@ -9,15 +9,11 @@
         _type - The type of object to look for [STRING]
 
     Returns:
-        BOOL - True if the any FOB is found, false otherwise
+        ARRAY - List of nearby objects
 */
 
 params ["_position"];
 
-private _nearbyFOBs = TAW_AUX_COMMON_fnc_fobSearch _position;
+private _nearbyFOBs = nearestObjects [_position, [TAW_FOB_List], TAW_FOB_Range];
 
-if (count _nearbyFOBs > 0) then {
-    true
-} else {
-    false
-};
+_nearbyFOBs;

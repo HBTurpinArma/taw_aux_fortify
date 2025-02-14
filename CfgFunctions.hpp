@@ -5,6 +5,7 @@ class CfgFunctions {
 			file="TAW_AUX_COMMON\Functions";
 			class cbaSettingInit{postInit=1;};
 			class fobNearby {};
+			class fobSearch {};
 		};
 	};
 };
