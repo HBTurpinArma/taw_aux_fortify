@@ -26,7 +26,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		["TAW", "FOB Settings"], 
 		[0, 1000, 100, 0],
 		0, 
-		{TAW_FOB_Range = parseNumber _this;}
+		{TAW_FOB_Range = _this;}
 	] call CBA_fnc_addSetting;
 
 	[
@@ -35,7 +35,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		["TAW", "FOB Settings"], 
 		true,
 		0, 
-		{TAW_FOB_Teleport = parseNumber _this;}
+		{TAW_FOB_Teleport = _this;}
 	] call CBA_fnc_addSetting;
 
 	[
@@ -44,7 +44,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		["TAW", "FOB Settings"], 
 		true,
 		0, 
-		{TAW_FOB_Spawn = parseNumber _this;}
+		{TAW_FOB_Spawn = _this;}
 	] call CBA_fnc_addSetting;
 
 	[
@@ -53,7 +53,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		["TAW", "FOB Settings"], 
 		true,
 		0, 
-		{TAW_FOB_Resupply = parseNumber _this;}
+		{TAW_FOB_Resupply = _this;}
 	] call CBA_fnc_addSetting;
 } else { 
    // Defaults for these settings if CBA is not loaded to modify these.
