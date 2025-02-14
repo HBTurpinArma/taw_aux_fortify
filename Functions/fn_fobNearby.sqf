@@ -14,7 +14,7 @@
 
 params ["_position"];
 
-private _nearbyFOBs = TAW_AUX_COMMON_fnc_fobSearch _position;
+private _nearbyFOBs = TAW_AUX_FORTIFY_fnc_fobSearch _position;
 
 if (count _nearbyFOBs > 0) then {
     true

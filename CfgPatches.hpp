@@ -1,8 +1,8 @@
 class cfgPatches
 {
-	class TAW_AUX_COMMON
+	class TAW_AUX_FORTIFY
 	{
-		name="TAW Aux Common";
+		name="TAW Aux Fortify";
 		author="TAW";
 		requiredAddons[]={	
 			"ace_main",
