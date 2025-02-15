@@ -5,12 +5,11 @@ class cfgPatches
 		name="TAW Aux Fortify";
 		author="TAW";
 		requiredAddons[]={	
-			"ace_main",
+			"cba_main",
+			"ace_main"
 		};
 		requiredVersion=1.0;
 		weapons[]={};
 		units[]={};
-		magazines[]={};
-		ammo[]={};
 	};
 };
