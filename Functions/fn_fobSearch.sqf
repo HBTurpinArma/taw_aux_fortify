@@ -4,7 +4,7 @@
         Checks an area around an object to see if any specific object is nearby.
 
     Parameters:
-        _position - The object to check around [POSITION]
+        _object - The object to check around [OBJECT]
         _radius - The radius to check within [NUMBER]
         _type - The type of object to look for [STRING]
 
@@ -12,8 +12,8 @@
         ARRAY - List of nearby objects
 */
 
-params ["_position"];
+params ["_object"];
 
-private _nearbyFOBs = nearestObjects [_position, [TAW_FOB_List], TAW_FOB_Range];
+private _nearbyFOBs = nearestObjects [_object, TAW_FOB_List, TAW_FOB_Range];
 
-_nearbyFOBs;
+_nearbyFOBs
