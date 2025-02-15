@@ -1,13 +1,8 @@
-/* =================================================
-*   Author: HBTurpin
-*
-*	Params:
-*	None
-*
-*	Returns:
-*	Nothing
-*
-* =================================================*/
+/*
+    Function: fn_cbaSettingInit
+    Description:
+        Initializes the CBA settings for TAW FOBs.
+*/
 
 // FOB Settings
 if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
@@ -17,7 +12,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		["TAW", "FOB Settings"], 
 		"[""B_Truck_01_FOB_F"",""B_Slingload_01_FOB_F""]",
 		0, 
-		{TAW_FOB_List = parseSimpleArray _this;}
+		{params["_value"]; TAW_FOB_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;
 
 	[
@@ -26,7 +21,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		["TAW", "FOB Settings"], 
 		[0, 1000, 100, 0],
 		0, 
-		{TAW_FOB_Range = _this;}
+		{params["_value"]; TAW_FOB_Range = _value;}
 	] call CBA_fnc_addSetting;
 
 	[
@@ -35,7 +30,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		["TAW", "FOB Settings"], 
 		true,
 		0, 
-		{TAW_FOB_Teleport = _this;}
+		{params["_value"]; TAW_FOB_Teleport = _value;}
 	] call CBA_fnc_addSetting;
 
 	[
@@ -44,7 +39,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		["TAW", "FOB Settings"], 
 		true,
 		0, 
-		{TAW_FOB_Spawn = _this;}
+		{params["_value"]; TAW_FOB_Spawn = _value;}
 	] call CBA_fnc_addSetting;
 
 	[
@@ -53,7 +48,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		["TAW", "FOB Settings"], 
 		true,
 		0, 
-		{TAW_FOB_Resupply = _this;}
+		{params["_value"]; TAW_FOB_Resupply = _value;}
 	] call CBA_fnc_addSetting;
 } else { 
    // Defaults for these settings if CBA is not loaded to modify these.
