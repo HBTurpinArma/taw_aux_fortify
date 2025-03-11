@@ -8,6 +8,8 @@ disableSerialization;
 
 waitUntil{!isNull (findDisplay 38100)};
 
+systemChat format ["%1 : %2", typeName _terminal_type, _terminal_type]; 
+	
 private _terminal_type = "All";
 if(!(isNil "TAW_VehicleSpawner_Type")) then {_vehicle_type = TAW_VehicleSpawner_Type};
 
@@ -50,11 +52,12 @@ private _row = 0;
 			_vehicle_cost = (_x select 1);
 		};
 
-		_control lnbAddRow["",_vehicle_info select 3, format ["Cost: %1", _vehicle_cost]];
+		_control lnbAddRow["",_vehicle_info select 3, "", format ["Cost: %1", _vehicle_cost]];
 		_control lnbSetPicture[[_row,0],(_vehicle_info select 2)];
 		_control lnbSetData[[_row,0],(_x select 0)]; //Set the classname to index/column 0
 		_control lnbSetData[[_row,1],(_vehicle_info select 3)]; //Set the displayName to index/column 1
 		_control lnbSetData[[_row,2],format ["%1", _vehicle_cost]]; //Set the cost to index/column 2
+		_control lnbSetData[[_row,3],(_vehicle_info select 4)]; //Set the vehicleClass to index/column 3
 		_row = _row + 1;
 
 		//systemChat format ["%1, %2, %3", _x select 0, _x select 1, getText(configFile >> "CfgVehicles" >> _x select 0 >> "vehicleClass")]; 

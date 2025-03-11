@@ -6,14 +6,12 @@
 
 params ["_terminal_type"];
 
-//systemChat format ["TAW_fnc_terminal_open (terminal_type: %1 | param_type: %2)", _terminal_type, typeName _terminal_type];
-
-if(typeName _terminal_type == "STRING") then {
-	if (_terminal_type == "") exitWith {closeDialog 0};
-	TAW_VehicleSpawner_Type = _terminal_type;
-} else {
-	closeDialog 0;
+//Logging for debug mode
+if (TAW_VehicleSpawner_Debug) then {
+	systemChat format ["TAW_fnc_terminal_open (terminal_type: %1 | param_type: %2)", _terminal_type, typeName _terminal_type];
 };
+
+TAW_VehicleSpawner_Type = _terminal_type;
 
 disableSerialization;
 

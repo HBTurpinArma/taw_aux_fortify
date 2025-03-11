@@ -7,6 +7,15 @@
 if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 
 	[
+		"TAW_VehicleSpawner_Debug", "CHECKBOX", 
+		["Debug Mode", "Enable Debug Mode for logging when a function is called."], 
+		["TAW", "Vehicle Terminal Settings"], 
+		false,
+		0, 
+		{params["_value"]; TAW_VehicleSpawner_Debug = _value;}
+	] call CBA_fnc_addSetting;
+
+	[
 		"TAW_VehicleSpawner_Spawn_Time", "SLIDER", 
 		["Terminal Spawn Time", "Select the time at which it takes to spawn a vehicle from a terminal."], 
 		["TAW", "Vehicle Terminal Settings"], 
@@ -80,6 +89,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 
 } else { 
    	// Defaults for these settings if CBA is not loaded to modify these.
+	TAW_VehicleSpawner_Debug = false;
 	TAW_VehicleSpawner_Spawn_Time = 10;
 	TAW_VehicleSpawner_Spawn_Range = 100;
 	TAW_VehicleSpawner_Spawn_Cost = false;

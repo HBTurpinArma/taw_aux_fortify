@@ -14,12 +14,15 @@ if(lnbCurSelRow 38101 == -1) exitWith {systemChat "You did not select a vehicle 
 private _className = lnbData[38101,[(lnbCurSelRow 38101),0]];
 private _displayName = lnbData[38101,[(lnbCurSelRow 38101),1]];
 private _cost = parseNumber (lnbData[38101,[(lnbCurSelRow 38101),2]]);
+private _vehicleClass = lnbData[38101,[(lnbCurSelRow 38101),3]];
 
-//Logging
-//systemChat format ["TAW_fnc_terminal_spawn (classname: %1 | displayname: %2 | cost: %3)", _className, _displayName, lnbData[38101,[(lnbCurSelRow 38101),2]]];
+//Logging for debug mode
+if (TAW_VehicleSpawner_Debug) then {
+	systemChat format ["TAW_fnc_terminal_spawn (classname: %1 | displayname: %2 | cost: %3)", _className, _displayName, lnbData[38101,[(lnbCurSelRow 38101),2]]];
+};
 
 //Search for valid spawn locations around the terminal.
-private _spawn_locations = [_player] call TAW_fnc_terminal_findSpawnLocation;
+private _spawn_locations = [_player, _vehicleClass] call TAW_fnc_terminal_findSpawnLocation;
 if (count _spawn_locations <= 0) exitWith {systemChat "There are no spawn locations nearby."};
 
 private _valid_spawn_locations = [];
@@ -56,7 +59,7 @@ _vehicle setPos _spawn_position; //Make sure it gets set onto the position.
 _vehicle setDir _spawn_direction; //Set the vehicles direction the same as the marker.
 
 // Check if the vehicle is a UAV in config, if so create a crew for it.
-if(getNumber(configFile >> "CfgVehicles" >> _class >> "isUav") == 1) then {
+if (getNumber(configFile >> "CfgVehicles" >> _className >> "isUav") == 1) then {
 	createVehicleCrew _vehicle;
 };
 
