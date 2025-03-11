@@ -6,6 +6,15 @@
 
 if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 	[
+		"TAW_FOB_Debug", "CHECKBOX", 
+		["Debug Mode", "Enable Debug Mode for logging when a function is called."], 
+		["TAW", "FOB Settings"], 
+		false,
+		0, 
+		{params["_value"]; TAW_FOB_Debug = _value;}
+	] call CBA_fnc_addSetting;
+
+	[
 		"TAW_FOB_List", "EDITBOX", 
 		["FOB List", "Enter list of vehicles/objects to be considered an FOB. Example: [""B_Truck_01_FOB_F"",""B_Slingload_01_FOB_F""]"], 
 		["TAW", "FOB Settings"], 
@@ -51,8 +60,9 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 	] call CBA_fnc_addSetting;
 } else { 
    // Defaults for these settings if CBA is not loaded to modify these.
+   TAW_FOB_Debug = false;
    TAW_FOB_List = [];
-   TOB_FOB_Range = 100;
+   TAW_FOB_Range = 100;
    TAW_FOB_Teleport = true;
    TAW_FOB_Spawn = true;
    TAW_FOB_Resupply = true;
