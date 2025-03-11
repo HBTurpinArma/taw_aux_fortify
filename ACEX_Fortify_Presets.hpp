@@ -32,6 +32,17 @@ class ACEX_Fortify_Presets {
             {"Land_BagBunker_Small_F", 300},
         };
     };
+    class TAW_FOB_Special {
+        displayName = "FOB (Special)";
+        objects[] = {
+            {"TAW_Terminal_Air_Laptop", 100},
+            {"TAW_Terminal_Car_Laptop", 100},
+            {"TAW_Terminal_Boat_Laptop", 100},
+            {"TAW_Terminal_Air_Spawn", 100},
+            {"TAW_Terminal_Car_Spawn", 100},
+            {"TAW_Terminal_Boat_Spawn", 100},
+        };
+    };
     class TAW {
         displayName = "TAW";
         objects[] = {
@@ -45,6 +56,7 @@ class ACEX_Fortify_Presets {
             {"Land_HBarrierWall_5_F", 200, "TAW_FOB_Barriers"},
             {"Land_HBarrierWall_corridor_F", 200, "TAW_FOB_Barriers"},
             {"Land_HBarrierWall_Big_F", 300, "TAW_FOB_Barriers"},
+            //Misc FOB Items
             {"Land_Razorwire_F", 100, "TAW_FOB_Misc"},
             {"Land_Shoot_House_Wall_F", 100, "TAW_FOB_Misc"},
             {"Land_Shoot_House_Wall_Crouch_F", 50, "TAW_FOB_Misc"},
@@ -52,6 +64,15 @@ class ACEX_Fortify_Presets {
             {"Land_BagFence_Long_F", 50, "TAW_FOB_Misc"},
             {"Land_BagFence_Round_F", 50, "TAW_FOB_Misc"},
             {"Land_BagBunker_Small_F", 300, "TAW_FOB_Misc"},
+            {"Land_BagFence_Round_F", 50, "TAW_FOB_Misc"},
+            {"Land_BagBunker_Small_F", 300, "TAW_FOB_Misc"},
+            //Special FOB Items
+            {"TAW_Terminal_Air_Laptop", 100, "TAW_FOB_Special"},
+            {"TAW_Terminal_Car_Laptop", 100, "TAW_FOB_Special"},
+            {"TAW_Terminal_Boat_Laptop", 100, "TAW_FOB_Special"},
+            {"TAW_Terminal_Air_Spawn", 100, "TAW_FOB_Special"},
+            {"TAW_Terminal_Car_Spawn", 100, "TAW_FOB_Special"},
+            {"TAW_Terminal_Boat_Spawn", 100, "TAW_FOB_Special"},
             //Field Building (Doesn't require FOB nearby)
             {"Land_BagFence_Long_F", 50, "TAW_FIELD"},
             {"Land_BagFence_Round_F", 50, "TAW_FIELD"},

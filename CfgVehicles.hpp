@@ -1,26 +1,22 @@
 class cfgVehicles
 {
+	//FOBs
 	class B_Truck_01_box_F;
-	class B_Truck_01_FOB_F: B_Truck_01_box_F
-	{
+	class B_Truck_01_FOB_F: B_Truck_01_box_F {
 		displayName = "HEMTT FOB Container [TAW]";
 	};
 
 
 	class B_Slingload_01_Cargo_F;
-	class B_Slingload_01_FOB_F: B_Slingload_01_Cargo_F
-	{
+	class B_Slingload_01_FOB_F: B_Slingload_01_Cargo_F {
 		displayName = "Huron FOB Container [TAW]";
 	};
 
 	class Slingload_01_Base_F;
-	class B_Slingload_01_Medevac_F: Slingload_01_Base_F
-	{
+	class B_Slingload_01_Medevac_F: Slingload_01_Base_F {
 		displayName = "Huron Medical Container [TAW]";
-		class UserActions
-		{
-			class ACE_FullHeal
-			{
+		class UserActions {
+			class ACE_FullHeal {
 				displayName = "<t color='#FF0000'>Heal</t>";
 				priority = 50;
 				radius = 5;
@@ -34,6 +30,130 @@ class cfgVehicles
 			};
 		};
 	};
+
+	//Vehicle Terminals
+	class Land_Laptop_03_olive_F;
+	class TAW_Terminal_Air_Laptop: Land_Laptop_03_olive_F {
+		displayName = "Aircraft Terminal [TAW]";
+		hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_olive_CO.paa", ""};
+	
+		class UserActions {
+			class OpenTerminal_Aircraft {
+				displayName = "<t color='#999999'>Aircraft Terminal</t>";
+				priority = 50;
+				radius = 7;
+				position = "interact";
+				showWindow = 0;
+				hideOnUse = 1;
+				onlyForPlayer = 0;
+				shortcut = "";
+				condition = "true";
+				statement = "[""Air"", player] call TAW_fnc_terminal_open";
+			};
+		};
+	};
+
+	class TAW_Terminal_Car_Laptop: Land_Laptop_03_olive_F {
+		displayName = "Ground Vehicle Terminal [TAW]";
+		hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_olive_CO.paa", ""};
+		
+		class UserActions {
+			class OpenTerminal_GroundVehicle {
+				displayName = "<t color='#999999'>Ground Vehicle Terminal</t>";
+				priority = 50;
+				radius = 7;
+				position = "interact";
+				showWindow = 0;
+				hideOnUse = 1;
+				onlyForPlayer = 0;
+				shortcut = "";
+				condition = "true";
+				statement = "[""Car""] call TAW_fnc_terminal_open";
+			};
+		};
+	};
+
+	class TAW_Terminal_Boat_Laptop: Land_Laptop_03_olive_F {
+		displayName = "Boat Terminal [TAW]";
+		hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_olive_CO.paa", ""};
+		
+		class UserActions {
+			class OpenTerminal_Boat {
+				displayName = "<t color='#999999'>Boat Terminal</t>";
+				priority = 50;
+				radius = 7;
+				position = "interact";
+				showWindow = 0;
+				hideOnUse = 1;
+				onlyForPlayer = 0;
+				shortcut = "";
+				condition = "true";
+				statement = "[""Boat""] call TAW_fnc_terminal_open";
+			};
+		};
+	};
+
+	class Sign_Arrow_Yellow_F;
+	class TAW_Terminal_Air_Spawn: Sign_Arrow_Yellow_F {
+		displayName = "Aircraft Spawn Point [TAW]";
+		scope = 2;
+		scopeCurator = 2;
+		side = 3;
+	};
+
+	class TAW_Terminal_Car_Spawn: Sign_Arrow_Yellow_F {
+		displayName = "Ground Vehicle Spawn Point [TAW]";
+		scope = 2;
+		scopeCurator = 2;
+		side = 3;
+	};
+
+	class TAW_Terminal_Boat_Spawn: Sign_Arrow_Yellow_F {
+		displayName = "Boat Spawn Point [TAW]";
+		scope = 2;
+		scopeCurator = 2;
+		side = 3;
+	};
+
+	class Sign_Arrow_Blue_F;
+	class TAW_Resupply_Spawn: Sign_Arrow_Blue_F {
+		displayName = "Resupply Spawn Point [TAW]";
+		scope = 2;
+		scopeCurator = 2;
+		side = 3;
+	};
+
+	//Supplies
+	class CargoNet_01_barrels_F;
+	class CargoNet_01_box_F;
+	class B_CargoNet_01_ammo_F;
+	// class I_CargoNet_01_ammo_F;
+	// class O_CargoNet_01_ammo_F;
+	// class I_E_CargoNet_01_ammo_F;
+	// class C_IDAP_CargoNet_01_supplies_F;
+	// class Land_FoodSacks_01_cargo_brown_F;
+	// class Land_FoodSacks_01_cargo_brown_idap_F;
+	// class Land_FoodSacks_01_cargo_white_F;
+
+	class TAW_Supplies_Barrel: CargoNet_01_barrels_F {
+		displayName = "Supplies (Barrel) [TAW]";
+		scope = 2;
+		scopeCurator = 2;
+		side = 3;
+	};
+	class TAW_Supplies_Box: CargoNet_01_box_F {
+		displayName = "Supplies (Box) [TAW]";
+		scope = 2;
+		scopeCurator = 2;
+		side = 3;
+	};
+	class TAW_Supplies_Ammo: B_CargoNet_01_ammo_F {
+		displayName = "Supplies (Ammo) [TAW]";
+		scope = 2;
+		scopeCurator = 2;
+		side = 3;
+	};
+	
 	//Resupply Crates
 	class Box_NATO_Ammo_F;
 	class Box_NATO_Support_F;

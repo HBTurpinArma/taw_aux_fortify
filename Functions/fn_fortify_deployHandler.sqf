@@ -1,5 +1,5 @@
 /*
-    Function: fn_fortifyDeployHandler
+    Function: TAW_fnc_fortify_deployHandler
     Description:
         Initialises the ACE Fortify options to allow users to build bases around FOBs, and engineers to build walls.
 */
@@ -18,7 +18,7 @@
     ];
     
     if (!(typeOf _object in _fieldObjects)) then {
-        if (!(_object call TAW_AUX_fnc_fobNearby)) then { systemChat "You must be near a FOB to deploy these fortifications."; _return = false;};
+        if (!(_object call TAW_fnc_fob_isNearby)) then { systemChat "You must be near a FOB to deploy these fortifications."; _return = false;};
     };
 
     _return

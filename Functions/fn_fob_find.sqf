@@ -1,12 +1,10 @@
 /*
-    Function: fn_fobNearby
+    Function: TAW_fnc_fob_find
     Description:
         Checks an area around an object to see if any specific object is nearby.
 
     Parameters:
         _object - The object to check around [OBJECT]
-        _radius - The radius to check within [NUMBER]
-        _type - The type of object to look for [STRING]
 
     Returns:
         ARRAY - List of nearby objects

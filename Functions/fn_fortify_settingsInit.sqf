@@ -1,10 +1,9 @@
 /*
-    Function: fn_cbaSettingInit
+    Function: TAW_fnc_fortify_settingsInit
     Description:
         Initializes the CBA settings for TAW FOBs.
 */
 
-// FOB Settings
 if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 	[
 		"TAW_FOB_List", "EDITBOX", 
