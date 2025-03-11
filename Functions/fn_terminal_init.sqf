@@ -8,10 +8,12 @@ disableSerialization;
 
 waitUntil{!isNull (findDisplay 38100)};
 
-systemChat format ["%1 : %2", typeName _terminal_type, _terminal_type]; 
-	
 private _terminal_type = "All";
-if(!(isNil "TAW_VehicleSpawner_Type")) then {_vehicle_type = TAW_VehicleSpawner_Type};
+if(!(isNil "TAW_VehicleSpawner_Type")) then {_terminal_type = TAW_VehicleSpawner_Type};
+
+if (TAW_VehicleSpawner_Debug) then {
+	systemChat format ["TAW_fnc_terminal_init (terminal_type: %1 | param_type: %2)", _terminal_type, typeName _terminal_type]; 
+};
 
 private _control = ((findDisplay 38100) displayCtrl 38101);
 
