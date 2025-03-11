@@ -67,7 +67,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		"TAW_VehicleSpawner_Air_List", "EDITBOX", 
 		["Air Assets", "Enter list of vehicles/objects that should be spawnable at the aircraft terminal. Example: [[""FIR_AV8B"",100],[""Valor_Turret_Transport_CrewGun_F"",200]]"], 
 		["TAW", "Vehicle Terminal Settings"], 
-		"[[""FIR_AV8B"",500], [""Valor_Turret_Transport_CrewGun_F"",500], [""Valor_Attack_F"",400], [""Valor_Transport_Armed_F"",300], [""B_T_VTOL_01_infantry_F"", 500], [""B_T_VTOL_01_vehicle_F"", 500],	[""B_T_VTOL_01_armed_F"", 500],	[""JK_B_US_C5M_Super_Galaxy_F"", 800], [""RHSGREF_A29B_HIDF"", 700], [""USAF_A10"", 700], [""USAF_C130J"", 800], [""USAF_F22"", 600], [""USAF_F35A"", 600],	[""RHS_UH60M_d"", 500],	[""RHS_CH_47F_10"", 600], [""B_Heli_Transport_03_F"", 600],	[""RHS_AH64D"", 700], [""B_Heli_Attack_01_dynamicLoadout_F"", 700],	[""RHS_MELB_MH6M"", 400], [""RHS_MELB_AH6M"", 500]]",
+		"[[""FIR_AV8B"",500], [""RHSGREF_A29B_HIDF"", 700], [""USAF_A10"", 700], [""USAF_F22"", 600], [""USAF_F35A"", 600], [""JK_B_US_C5M_Super_Galaxy_F"", 800], [""USAF_C130J"", 800], [""RHS_UH60M_d"", 500], [""RHS_MELB_MH6M"", 400], [""RHS_MELB_AH6M"", 500], [""RHS_CH_47F_10"", 600], [""B_Heli_Transport_03_F"", 600], [""RHS_AH64D"", 700], [""B_Heli_Attack_01_dynamicLoadout_F"", 700], [""Valor_Turret_Transport_CrewGun_F"",500], [""Valor_Attack_F"",400], [""Valor_Transport_Armed_F"",300], [""B_T_VTOL_01_infantry_F"", 500], [""B_T_VTOL_01_vehicle_F"", 500], [""B_T_VTOL_01_armed_F"", 500]]",
 		0, 
 		{params["_value"]; TAW_VehicleSpawner_Air_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;
