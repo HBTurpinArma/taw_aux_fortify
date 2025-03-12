@@ -4,12 +4,30 @@ class cfgVehicles
 	class B_Truck_01_box_F;
 	class B_Truck_01_FOB_F: B_Truck_01_box_F {
 		displayName = "HEMTT FOB Container [TAW]";
+
+		class TransportBackpacks {
+		};
+		class TransportWeapons {
+		};
+		class TransportItems {
+		};
+		class TransportMagazines {
+		};
 	};
 
 
 	class B_Slingload_01_Cargo_F;
 	class B_Slingload_01_FOB_F: B_Slingload_01_Cargo_F {
 		displayName = "Huron FOB Container [TAW]";
+
+		class TransportBackpacks {
+		};
+		class TransportWeapons {
+		};
+		class TransportItems {
+		};
+		class TransportMagazines {
+		};
 	};
 
 	class Slingload_01_Base_F;
@@ -39,7 +57,7 @@ class cfgVehicles
 	
 		class UserActions {
 			class OpenTerminal_Aircraft {
-				displayName = "<t color='#999999'>Aircraft Terminal</t>";
+				displayName = "<t color='#BBBBBB'>Aircraft Terminal</t>";
 				priority = 50;
 				radius = 7;
 				position = "interact";
@@ -59,7 +77,7 @@ class cfgVehicles
 		
 		class UserActions {
 			class OpenTerminal_GroundVehicle {
-				displayName = "<t color='#999999'>Ground Vehicle Terminal</t>";
+				displayName = "<t color='#BBBBBB'>Ground Vehicle Terminal</t>";
 				priority = 50;
 				radius = 7;
 				position = "interact";
@@ -79,7 +97,7 @@ class cfgVehicles
 		
 		class UserActions {
 			class OpenTerminal_Boat {
-				displayName = "<t color='#999999'>Boat Terminal</t>";
+				displayName = "<t color='#BBBBBB'>Boat Terminal</t>";
 				priority = 50;
 				radius = 7;
 				position = "interact";
