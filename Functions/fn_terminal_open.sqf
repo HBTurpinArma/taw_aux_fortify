@@ -6,6 +6,8 @@
 
 params ["_terminal_type"];
 
+if (!hasInterface) exitWith {}; 
+
 //Logging for debug mode
 if (TAW_VehicleSpawner_Debug) then {
 	systemChat format ["TAW_fnc_terminal_open (terminal_type: %1 | param_type: %2)", _terminal_type, typeName _terminal_type];

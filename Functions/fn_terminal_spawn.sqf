@@ -4,6 +4,8 @@
         Spawns a vehicle at a valid spawn location around the terminal.
 */
 
+if (!hasInterface) exitWith {}; 
+
 private _player = player;
 
 disableSerialization;
@@ -64,7 +66,7 @@ if (getNumber(configFile >> "CfgVehicles" >> _className >> "isUav") == 1) then {
 };
 
 //Remove the cost from the budget.
-[side group _player, _cost] call ace_fortify_fnc_updateBudget;
+[side group _player, -_cost] call ace_fortify_fnc_updateBudget;
 
 //Cleanup inventory of vehicle.
 clearWeaponCargoGlobal _vehicle;

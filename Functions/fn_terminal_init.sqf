@@ -4,6 +4,8 @@
         Initializes the Vehicle Spawner Terminal and populates the list with vehicles.
 */
 
+if (!hasInterface) exitWith {}; 
+
 disableSerialization;
 
 waitUntil{!isNull (findDisplay 38100)};
