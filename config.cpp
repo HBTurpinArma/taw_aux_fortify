@@ -5,5 +5,5 @@
 // AceX Fortify Presets
 #include "ACEX_Fortify_Presets.hpp"
 
-//Terminal Menu
-#include "Data/TerminalMenu/vehicle_terminal_menu.hpp"
+// Terminal Menu
+#include "Dialogs/vehicle_terminal_menu.hpp"

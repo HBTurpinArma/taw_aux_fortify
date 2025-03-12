@@ -1,4 +1,4 @@
-#include "Data/TerminalMenu/vehicle_terminal_resources.hpp"
+#include "Dialogs/vehicle_terminal_resources.hpp"
 
 class VVS_Menu
 {
