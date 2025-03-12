@@ -14,6 +14,7 @@ class CfgFunctions {
 			class supplies_find{};
 			class supplies_isNearby{};
 			class supplies_collectNearby{};
+			class supplies_monitor{postInit=1;};
 		};
 
 		class VEHICLE_TERMINAL {
