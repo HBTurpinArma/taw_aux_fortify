@@ -8,21 +8,35 @@ if (!hasInterface) exitWith {};
 
 disableSerialization;
 
+//Wait for the terminal to be created.
 waitUntil{!isNull (findDisplay 38100)};
 
+//Get the terminal type from global when the open function is called.
 private _terminal_type = "All";
 if(!(isNil "TAW_VehicleSpawner_Type")) then {_terminal_type = TAW_VehicleSpawner_Type};
 
+//Debug logging
 if (TAW_VehicleSpawner_Debug) then {
 	systemChat format ["TAW_fnc_terminal_init (terminal_type: %1 | param_type: %2)", _terminal_type, typeName _terminal_type]; 
 };
 
-private _control = ((findDisplay 38100) displayCtrl 38101);
+//Update the budget label
+// private _budget_label = ((findDisplay 38100) displayCtrl 38102);
+// private _budget = [side player] call ace_fortify_fnc_getBudget;
 
+// if (_budget != -1) then {
+// 	_budget_label ctrlSetText format ["Budget: %1", _budget];
+// } else {
+// 	_budget_label ctrlSetText format [""];
+// };
+
+//Get the table control, clear it if it has any rows.
+private _control = ((findDisplay 38100) displayCtrl 38101);
 if((lnbSize 38101) select 0 > -1) then {
 	lnbClear _control;
 };
 
+//Select terminal type and what vehicles should be displayed.
 private _vehicle_list = [];
 if(typeName _terminal_type == "STRING") then {
 	_vehicle_list = switch (_terminal_type) do
@@ -44,8 +58,10 @@ if(typeName _terminal_type == "STRING") then {
 	};
 };
 
+//No vehicles found
 if ((count _vehicle_list) == 0) exitWith {hint "There was an error and no vehicles could be fetched!"};
 
+//Build the list
 private _row = 0;
 {
 	private _vehicle_info = [_x select 0] call TAW_fnc_terminal_vehicleInfo;

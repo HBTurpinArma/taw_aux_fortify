@@ -50,6 +50,18 @@ class VVS_Menu
 			w = 0.8;
 			h = (1 / 25);
 		};
+
+		// class Budget : VVS_RscTitle
+		// {
+		// 	colorBackground[] = {0, 0, 0, 0};
+		// 	idc = VVS_Budget;
+		// 	text = "Budget: -";
+		// 	x = 0.1;
+		// 	y = 0.2;
+		// 	w = 0.8;
+		// 	h = (1 / 25);
+		// 	align = "right";
+		// };
 	};
 	
 	class controls

@@ -25,8 +25,10 @@ if(!isClass (configFile >> "CfgVehicles" >> _class)) exitWith {[]}; //Class does
 
 //Fetch
 private _scope = getNumber(configFile >> "CfgVehicles" >> _class >> "scope");
-//TODO: Add a check for the picture to see if they exist and give a placeholder if it doesnt.
 private _picture = getText(configFile >> "CfgVehicles" >> _class >> "picture");
+if ((_picture == "") || (_picture == "pictureThing")) then {
+	_picture = ""; //Default picture for missings?..
+};
 private _displayName = getText(configFile >> "CfgVehicles" >> _class >> "displayName");
 private _vehicleClass = getText(configFile >> "CfgVehicles" >> _class >> "vehicleClass");
 private _side = getNumber(configFile >> "CfgVehicles" >> _class >> "side");

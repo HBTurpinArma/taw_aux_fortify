@@ -1,5 +1,6 @@
 #define VVS_Menu_IDD 38100
 #define VVS_VehicleList 38101
+// #define VVS_Budget 38102
 
 class VVS_RscControlsGroup {
 	type = 15;
