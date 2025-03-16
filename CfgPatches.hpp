@@ -6,7 +6,8 @@ class cfgPatches
 		author="TAW";
 		requiredAddons[]={	
 			"cba_main",
-			"ace_main"
+			"ace_main",
+			"TAW_AUX_AMMO"
 		};
 		requiredVersion=1.0;
 		weapons[]={};

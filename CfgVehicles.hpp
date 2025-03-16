@@ -182,14 +182,301 @@ class cfgVehicles
 	class Box_NATO_Equip_F;
 
 	class TAW_Resupply_AmmoCrate: Box_NATO_Ammo_F {
-		displayName="Ammo Resupply Crate [TAW]";
+		displayName="Ammo Resupply Crate (Blufor) [TAW]";
 		class TransportBackpacks {
 		};
 		class TransportWeapons {
+			class rhs_weap_M136
+			{
+				weapon="rhs_weap_M136";
+				count=5;
+			};
 		};
 		class TransportItems {
 		};
 		class TransportMagazines {
+			class TAW_AMMO_40RND_46x30_JHP_MAG
+			{
+				magazine="TAW_AMMO_40RND_46x30_JHP_MAG";
+				count=20;
+			};
+			// class TAW_AMMO_40RND_46x30_JHP_TRACER_MAG
+			// {
+			// 	magazine="TAW_AMMO_40RND_46x30_JHP_TRACER_MAG";
+			// 	count=20;
+			// };
+			class TAW_AMMO_6RND_45ACP_CYLINDER
+			{
+				magazine="TAW_AMMO_6RND_45ACP_CYLINDER";
+				count=20;
+			};			
+			class TAW_AMMO_11RND_45ACP_MAG
+			{
+				magazine="TAW_AMMO_11RND_45ACP_MAG";
+				count=20;
+			};			
+			class TAW_AMMO_30RND_45ACP_MAG
+			{
+				magazine="TAW_AMMO_30RND_45ACP_MAG";
+				count=30;
+			};
+			// class TAW_AMMO_30RND_45ACP_TRACER_MAG
+			// {
+			// 	magazine="TAW_AMMO_30RND_45ACP_TRACER_MAG";
+			// 	count=30;
+			// };
+			class TAW_AMMO_15RND_9x19_JHP_MAG
+			{
+				magazine="TAW_AMMO_15RND_9x19_JHP_MAG";
+				count=20;
+			};
+			// class TAW_AMMO_15RND_9x19_JHP_TRACER_MAG
+			// {
+			// 	magazine="TAW_AMMO_15RND_9x19_JHP_TRACER_MAG";
+			// 	count=20;
+			// };
+			class TAW_AMMO_30RND_9x19_JHP_MAG
+			{
+				magazine="TAW_AMMO_30RND_9x19_JHP_MAG";
+				count=20;
+			};
+			// class TAW_AMMO_30RND_9x19_JHP_TRACER_MAG
+			// {
+			// 	magazine="TAW_AMMO_30RND_9x19_JHP_TRACER_MAG";
+			// 	count=20;
+			// };
+			class TAW_AMMO_18RND_9x21_MAG
+			{
+				magazine="TAW_AMMO_18RND_9x21_MAG";
+				count=20;
+			};
+			class TAW_AMMO_30RND_9x21_MAG
+			{
+				magazine="TAW_AMMO_30RND_9x21_MAG";
+				count=20;
+			};
+			// class TAW_AMMO_30RND_9x21_TRACER_MAG
+			// {
+			// 	magazine="TAW_AMMO_30RND_9x21_TRACER_MAG";
+			// 	count=20;
+			// };
+			class TAW_AMMO_30RND_556x45_MAG
+			{
+				magazine="TAW_AMMO_30RND_556x45_MAG";
+				count=60;
+			};
+			// class TAW_AMMO_30RND_556x45_TRACER_MAG
+			// {
+			// 	magazine="TAW_AMMO_30RND_556x45_TRACER_MAG";
+			// 	count=50;
+			// };
+			class TAW_AMMO_120RND_556x45_DRUM
+			{
+				magazine="TAW_AMMO_120RND_556x45_DRUM";
+				count=12;
+			};
+			// class TAW_AMMO_120RND_556x45_TRACER_DRUM	
+			// {
+			// 	magazine="TAW_AMMO_120RND_556x45_TRACER_DRUM";
+			// 	count=20;
+			// };
+			class TAW_AMMO_200RND_556x45_BOX
+			{
+				magazine="TAW_AMMO_200RND_556x45_BOX";
+				count=12;
+			};
+			// class TAW_AMMO_200RND_556x45_TRACER_BOX
+			// {
+			// 	magazine="TAW_AMMO_200RND_556x45_TRACER_BOX";
+			// 	count=20;
+			// };
+			class TAW_AMMO_30RND_65x39_MAG
+			{
+				magazine="TAW_AMMO_30RND_65x39_MAG";
+				count=60;
+			};
+			// class TAW_AMMO_30RND_65x39_TRACER_MAG
+			// {
+			// 	magazine="TAW_AMMO_30RND_65x39_TRACER_MAG";
+			// 	count=50;
+			// };
+			class TAW_AMMO_100RND_65x39_MAG
+			{
+				magazine="TAW_AMMO_100RND_65x39_MAG";
+				count=12;
+			};
+			// class TAW_AMMO_100RND_65x39_TRACER_MAG
+			// {
+			// 	magazine="TAW_AMMO_100RND_65x39_TRACER_MAG";
+			// 	count=10;
+			// };
+			class TAW_AMMO_200RND_65x39_BOX
+			{
+				magazine="TAW_AMMO_200RND_65x39_BOX";
+				count=12;
+			};
+			// class TAW_AMMO_200RND_65x39_TRACER_BOX
+			// {
+			// 	magazine="TAW_AMMO_200RND_65x39_TRACER_BOX";
+			// 	count=10;
+			// };
+			class TAW_AMMO_30RND_65x39_MSBS_MAG
+			{
+				magazine="TAW_AMMO_30RND_65x39_MSBS_MAG";
+				count=20;
+			};
+			// class TAW_AMMO_30RND_65x39_TRACER_MSBS_MAG
+			// {
+			// 	magazine="TAW_AMMO_30RND_65x39_TRACER_MSBS_MAG";
+			// 	count=20;
+			// };
+			class TAW_AMMO_5RND_762x51_CLIP
+			{
+				magazine="TAW_AMMO_5RND_762x51_CLIP";
+				count=20;
+			};
+			class TAW_AMMO_5RND_762x51_CLIP
+			{
+				magazine="TAW_AMMO_5RND_762x51_AP_CLIP";
+				count=20;
+			};
+			class TAW_AMMO_20RND_762x51_MAG
+			{
+				magazine="TAW_AMMO_20RND_762x51_MAG";
+				count=20;
+			};
+			// class TAW_AMMO_20RND_762x51_TRACER_MAG
+			// {
+			// 	magazine="TAW_AMMO_20RND_762x51_TRACER_MAG";
+			// 	count=20;
+			// };
+			class TAW_AMMO_100RND_762x51_BOX
+			{
+				magazine="TAW_AMMO_100RND_762x51_BOX";
+				count=12;
+			};
+			// class TAW_AMMO_100RND_762x51_TRACER_BOX
+			// {
+			// 	magazine="TAW_AMMO_100RND_762x51_TRACER_BOX";
+			// 	count=10;
+			// };
+			class TAW_AMMO_5RND_762x54_CLIP
+			{
+				magazine="TAW_AMMO_5RND_762x54_CLIP";
+				count=20;
+			};
+			class TAW_AMMO_10RND_762x54_MAG
+			{
+				magazine="TAW_AMMO_10RND_762x54_MAG";
+				count=20;
+			};
+			// class TAW_AMMO_10RND_762x54_TRACER_MAG
+			// {
+			// 	magazine="TAW_AMMO_10RND_762x54_TRACER_MAG";
+			// 	count=20;
+			// };
+			class TAW_AMMO_100RND_762x54_BOX
+			{
+				magazine="TAW_AMMO_100RND_762x54_BOX";
+				count=20;
+			};
+			class TAW_AMMO_10RND_93x64_MAG
+			{
+				magazine="TAW_AMMO_10RND_93x64_MAG";
+				count=20;
+			};
+			class TAW_AMMO_120RND_93x64_BOX
+			{
+				magazine="TAW_AMMO_120RND_93x64_BOX";
+				count=12;
+			};
+			class TAW_AMMO_5RND_300_WM_MAG
+			{
+				magazine="TAW_AMMO_5RND_300_WM_MAG";
+				count=20;
+			};
+			class TAW_AMMO_5RND_338_LM_CLIP
+			{
+				magazine="TAW_AMMO_5RND_338_LM_CLIP";
+				count=20;
+			};
+			class TAW_AMMO_10RND_338_LM_MAG
+			{
+				magazine="TAW_AMMO_10RND_338_LM_MAG";
+				count=20;
+			};
+			class TAW_AMMO_20RND_338_LM_MAG
+			{
+				magazine="TAW_AMMO_20RND_338_LM_MAG";
+				count=20;
+			};
+			class TAW_AMMO_120RND_338_BOX
+			{
+				magazine="TAW_AMMO_120RND_338_BOX";
+				count=12;
+			};
+			class TAW_AMMO_7RND_408_MAG
+			{
+				magazine="TAW_AMMO_7RND_408_MAG";
+				count=20;
+			};	
+			class TAW_AMMO_10RND_127x99_MAG	
+			{
+				magazine="TAW_AMMO_10RND_127x99_MAG";
+				count=20;
+			};
+			// class TAW_AMMO_10RND_127x99_TRACER_MAG
+			// {
+			// 	magazine="TAW_AMMO_10RND_127x99_TRACER_MAG";
+			// 	count=20;
+			// };
+			class TAW_AMMO_10RND_127x99_API_MAG
+			{
+				magazine="TAW_AMMO_10RND_127x99_API_MAG";
+				count=20;
+			};
+
+			//AT Rockets
+			class Titan_AA
+			{
+				magazine="Titan_AA";
+				count=15;
+			};
+			class Titan_AP
+			{
+				magazine="Titan_AP";
+				count=10;
+			};
+			class Titan_AT
+			{
+				magazine="Titan_AT";
+				count=15;
+			};
+			class MRAWS_HE_F
+			{
+				magazine="MRAWS_HE_F";
+				count=20;
+			};
+			class MRAWS_HEAT55_F
+			{
+				magazine="MRAWS_HEAT55_F";
+				count=20;
+			};
+			class MRAWS_HEAT_F
+			{
+				magazine="MRAWS_HEAT_F";
+				count=20;
+			};
+			class Vorona_HEAT
+			{
+				magazine="Vorona_HEAT";
+				count=15;
+			};
+			class Vorona_HE
+			{
+				magazine="Vorona_HE";
+				count=15;
+			};
 		};
 	};
 	class TAW_Resupply_UtilityCrate: Box_NATO_WpsSpecial_F
@@ -411,36 +698,7 @@ class cfgVehicles
 				name="ACE_M84";
 				count=30;
 			};			
-			class Titan_AA
-			{
-				name="Titan_AA";
-				count=20;
-			};
-			class Titan_AP
-			{
-				name="Titan_AP";
-				count=10;
-			};
-			class Titan_AT
-			{
-				name="Titan_AT";
-				count=20;
-			};
-			class MRAWS_HE_F
-			{
-				name="MRAWS_HE_F";
-				count=10;
-			};
-			class MRAWS_HEAT55_F
-			{
-				name="MRAWS_HEAT55_F";
-				count=20;
-			};
-			class MRAWS_HEAT_F
-			{
-				name="MRAWS_HEAT_F";
-				count=20;
-			};
+
 		};
 		class TransportMagazines {
 		};
