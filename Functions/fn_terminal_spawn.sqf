@@ -69,9 +69,26 @@ if (getNumber(configFile >> "CfgVehicles" >> _className >> "isUav") == 1) then {
 [side group _player, -_cost] call ace_fortify_fnc_updateBudget;
 
 //Cleanup inventory of vehicle.
-clearWeaponCargoGlobal _vehicle;
-clearMagazineCargoGlobal _vehicle;
-clearItemCargoGlobal _vehicle;
+// clearWeaponCargoGlobal _vehicle;
+// clearMagazineCargoGlobal _vehicle;
+// clearItemCargoGlobal _vehicle;
+
+private _forcedVehicles = ["Valor_Transport_Unarmed_F", "Valor_Transport_Armed_F", "Valor_Transport_Armed_HMG_F", 
+	"Valor_Transport_CrewGun_F", "Valor_Attack_F", "B_T_VTOL_01_infantry_F", "B_T_VTOL_01_vehicle_F"];
+
+//ACE Cargo for resupply crates if vehicle is of helicopter type.
+if (_vehicle isKindOf "Helicopter" or _className in _forcedVehicles) then {
+	//Set the cargo space of the vehicle to be minimum of 6 slots or its current size.
+	private _cargoSize = _vehicle call ace_cargo_fnc_getCargoSpaceLeft;
+	[_vehicle, 6 max _cargoSize] call ace_cargo_fnc_setSpace;
+
+	for "_i" from 1 to 3 do { 
+		private _spaceLeft = _vehicle call ace_cargo_fnc_getCargoSpaceLeft;
+		if (_spaceLeft >= 6) then {
+			["TAW_Resupply_ACEArsenal", _vehicle] call ace_cargo_fnc_loadItem;
+		};
+	};
+};
 
 _vehicle allowDamage true;
 systemChat format["You have spent %1 resources for a %2 (%3)", _cost, _displayName, _className];

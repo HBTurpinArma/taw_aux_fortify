@@ -17,6 +17,11 @@ class CfgFunctions {
 			class supplies_monitor{postInit=1;};
 		};
 
+		class RESUPPLY {
+			file="TAW_AUX_FORTIFY\Functions";
+			class resupply_init{};
+		};
+
 		class VEHICLE_TERMINAL {
 			file="TAW_AUX_FORTIFY\Functions";
 			class terminal_settingsInit{postInit=1;};

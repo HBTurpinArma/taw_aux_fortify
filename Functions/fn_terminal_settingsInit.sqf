@@ -122,7 +122,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		"TAW_VehicleSpawner_Support_List", "EDITBOX", 
 		["Support Assets", "Enter list of support objects that should be spawnable at a terminal. Example: [[""B_Truck_01_FOB_F"",500],[""B_Slingload_01_FOB_F"",500]]"], 
 		["TAW", "Vehicle Terminal Settings"], 
-		"[[""B_Truck_01_FOB_F"",1000],[""B_Slingload_01_FOB_F"",1000],[""B_Slingload_01_Medevac_F"",600]]",
+		"[[""B_Truck_01_FOB_F"",1000],[""B_Slingload_01_FOB_F"",1000],[""B_Slingload_01_Medevac_F"",600],[""TAW_Resupply_ACEArsenal"",50]]",
 		0, 
 		{params["_value"]; TAW_VehicleSpawner_Support_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;

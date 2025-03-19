@@ -6,8 +6,7 @@ class cfgPatches
 		author="TAW";
 		requiredAddons[]={	
 			"cba_main",
-			"ace_main",
-			"TAW_AUX_AMMO"
+			"ace_main"
 		};
 		requiredVersion=1.0;
 		weapons[]={};
@@ -17,7 +16,8 @@ class cfgPatches
 			"TAW_Terminal_Air_Laptop", "TAW_Terminal_Car_Laptop", "TAW_Terminal_Boat_Laptop",
 			"TAW_Terminal_Air_Spawn", "TAW_Terminal_Car_Spawn", "TAW_Terminal_Boat_Spawn",
 			"TAW_Resupply_Spawn",
-			"TAW_Resupply_AmmoCrate", "TAW_Resupply_UtilityCrate", "TAW_Resupply_MedicalCrate", "TAW_Resupply_ExplosiveCrate",
+			"TAW_Resupply_ACEArsenal",
+			// "TAW_Resupply_AmmoCrate", "TAW_Resupply_UtilityCrate", "TAW_Resupply_MedicalCrate", "TAW_Resupply_ExplosiveCrate",
 			"TAW_Supplies_Barrel", "TAW_Supplies_Box", "TAW_Supplies_Ammo",
 		};
 	};
