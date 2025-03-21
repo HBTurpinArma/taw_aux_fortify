@@ -6,10 +6,9 @@
 - Adds new terminal and menu to spawn vehicles costing fortify resources.
     - Adds various CBA settings to modify vehicles and costs that are accessable by default.
     - Adds placeable spawn locations with fortify.
-- Adds an AM2 Utility Resupply Crate
-- Adds an AM2 Ammo Resupply Crate
-- Adds an AM2 Explosive Resupply Crate
-- Adds an AM2 Medical Resupply Crate
+    - Integrated with GOM to adjust pylons.
+- Adds new ace arsenal based resupply box to work with the mission template arsenals.
+    - Integrated with the vehicle terminal and spawned directly in vehicles spawned via terminal.
 
 # Functions
 - `_object call TAW_fnc_fob_isNearby` returns true if any FOB objects are within range of the object.
