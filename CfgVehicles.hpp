@@ -51,13 +51,40 @@ class cfgVehicles
 
 	//Vehicle Terminals
 	class Land_Laptop_03_olive_F;
-	class TAW_Terminal_Air_Laptop: Land_Laptop_03_olive_F {
+
+
+	class TAW_Terminal_Spawn_Laptop_Base: Land_Laptop_03_olive_F {
+		displayName = "Useless Terminal [TAW]";
+		hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_olive_CO.paa", ""};
+		scope = 0;
+		scopeCurator = 0;
+
+		class UserActions {
+			class OpenTerminal_CollectNearbySupplies {
+				displayName = "<t color='#EEEEEE'>Collect Nearby Supplies</t>";
+				priority = 49;
+				radius = 7;
+				position = "interact";
+				showWindow = 0;
+				hideOnUse = 1;
+				onlyForPlayer = 0;
+				shortcut = "";
+				condition = "[player, 50] call TAW_fnc_supplies_isNearby";
+				statement = "[player] call TAW_fnc_supplies_collectNearby";
+			};
+			//GOM Menu for Terminal?
+		};
+	};
+
+	class TAW_Terminal_Air_Laptop: TAW_Terminal_Spawn_Laptop_Base {
 		displayName = "Aircraft Terminal [TAW]";
 		hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_olive_CO.paa", ""};
-	
-		class UserActions {
+		scope = 2;
+		scopeCurator = 2;
+
+		class UserActions: UserActions {
 			class OpenTerminal_Aircraft {
-				displayName = "<t color='#BBBBBB'>Aircraft Terminal</t>";
+				displayName = "<t color='#EEEEEE'>Aircraft Terminal</t>";
 				priority = 50;
 				radius = 7;
 				position = "interact";
@@ -71,13 +98,15 @@ class cfgVehicles
 		};
 	};
 
-	class TAW_Terminal_Car_Laptop: Land_Laptop_03_olive_F {
+	class TAW_Terminal_Car_Laptop: TAW_Terminal_Spawn_Laptop_Base {
 		displayName = "Ground Vehicle Terminal [TAW]";
 		hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_olive_CO.paa", ""};
-		
-		class UserActions {
+		scope = 2;
+		scopeCurator = 2;
+
+		class UserActions: UserActions {
 			class OpenTerminal_GroundVehicle {
-				displayName = "<t color='#BBBBBB'>Ground Vehicle Terminal</t>";
+				displayName = "<t color='#EEEEEE'>Ground Vehicle Terminal</t>";
 				priority = 50;
 				radius = 7;
 				position = "interact";
@@ -91,13 +120,15 @@ class cfgVehicles
 		};
 	};
 
-	class TAW_Terminal_Boat_Laptop: Land_Laptop_03_olive_F {
+	class TAW_Terminal_Boat_Laptop: TAW_Terminal_Spawn_Laptop_Base {
 		displayName = "Boat Terminal [TAW]";
 		hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_olive_CO.paa", ""};
-		
-		class UserActions {
+		scope = 2;
+		scopeCurator = 2;
+
+		class UserActions: UserActions {
 			class OpenTerminal_Boat {
-				displayName = "<t color='#BBBBBB'>Boat Terminal</t>";
+				displayName = "<t color='#EEEEEE'>Boat Terminal</t>";
 				priority = 50;
 				radius = 7;
 				position = "interact";

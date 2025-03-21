@@ -1,6 +1,5 @@
 Vehicle Terminal menu to also includes current resources budget (top right corner).
 Timer to deploy vehicles; ace progress bar?
-Terminal to have actions to claim nearby resources
 Resource parameters zeuses can apply to any object, these will then get picked up.
 Add GOM to terminal to manage pylons
 Add USAF resupply/rearm point to terminal

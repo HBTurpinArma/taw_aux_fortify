@@ -13,27 +13,14 @@
 
 params ["_object", "_range"];
 
-private _returnSupplies = [];
-
 //Predefined Supplies in CBA Settings
-private _suppliesClasses = [];
+private _supplyClasses = [];
 {
-    _supplyClasses append (_x select 0);
+    _supplyClasses append [(_x select 0)];
 } forEach TAW_Supplies_List;
 
 //Find nearby supplies and add them to the array with their returned values.
-
-
-private _nearbySupplies append nearestObjects [_object, _suppliesClasses, _range];
-{
-    private _suppliesReturned = 500; //Default value for now, lets look this up later.
-    _returnSupplies append [[_x, _suppliesReturned]];
-
-} forEach _nearbySupplies;
-
-
-//TODO: Search for any objects with parameter added to them to be considered as supplies.
-
+private _nearbySupplies = nearestObjects [_object, _supplyClasses, _range];
 
 //Return supply array.
 _nearbySupplies

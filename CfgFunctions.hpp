@@ -15,6 +15,7 @@ class CfgFunctions {
 			class supplies_isNearby{};
 			class supplies_collectNearby{};
 			class supplies_monitor{postInit=1;};
+			class supplies_getValue{};
 		};
 
 		class RESUPPLY {

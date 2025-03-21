@@ -127,6 +127,16 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		{params["_value"]; TAW_VehicleSpawner_Support_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;
 
+
+	[
+		"TAW_Supplies_List", "EDITBOX", 
+		["Supplies List", "Enter list of supply objects which can be recovered at a terminal. Example: [[""TAW_Supplies_Barrel"",500],[""TAW_Supplies_Box"",500],[""TAW_Supplies_Ammo"",500]]"], 
+		["TAW", "Supplies Settings"], 
+		"[[""TAW_Supplies_Barrel"",500],[""TAW_Supplies_Box"",500],[""TAW_Supplies_Ammo"",500]]",
+		0, 
+		{params["_value"]; TAW_Supplies_List = parseSimpleArray _value;}
+	] call CBA_fnc_addSetting;
+
 } else { 
    	// Defaults for these settings if CBA is not loaded to modify these.
 	TAW_VehicleSpawner_Debug = false;
@@ -138,5 +148,6 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 	TAW_VehicleSpawner_Boat_List = [];
 	TAW_VehicleSpawner_Drone_List = [];
 	TAW_VehicleSpawner_Support_List = [];
+	TAW_Supplies_List = [["TAW_Supplies_Barrel",500],["TAW_Supplies_Box",500],["TAW_Supplies_Ammo",500]];
 };
 

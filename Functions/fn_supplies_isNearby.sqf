@@ -1,5 +1,5 @@
 /*
-    Function: TAW_fnc_reycleNearby
+    Function: TAW_fnc_supplies_isNearby
     Description:
         Returns true if there are any nearby supplies;
         
