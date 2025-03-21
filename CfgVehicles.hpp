@@ -74,6 +74,19 @@ class cfgVehicles
 			};
 			//GOM Menu for Terminal?
 		};
+
+		class ACE_Actions {
+			class ACE_MainActions {
+				class OpenTerminal_CollectNearbySupplies {
+					displayName = "Collect Nearby Supplies";
+					condition = "[_player, 50] call TAW_fnc_supplies_isNearby";
+					statement = "[_player] call TAW_fnc_supplies_collectNearby";
+					position = [0,0,0];
+					distance = 2;
+					icon = "";
+				};
+			};
+        };
 	};
 
 	class TAW_Terminal_Air_Laptop: TAW_Terminal_Spawn_Laptop_Base {
@@ -84,7 +97,7 @@ class cfgVehicles
 
 		class UserActions: UserActions {
 			class OpenTerminal_Aircraft {
-				displayName = "<t color='#EEEEEE'>Aircraft Terminal</t>";
+				displayName = "Open Aircraft Terminal";
 				priority = 50;
 				radius = 7;
 				position = "interact";
@@ -96,6 +109,19 @@ class cfgVehicles
 				statement = "[""Air"", player] call TAW_fnc_terminal_open";
 			};
 		};
+
+		class ACE_Actions: ACE_Actions {
+			class ACE_MainActions: ACE_MainActions {
+				class OpenTerminal_Aircraft {
+					displayName = "Open Aircraft Terminal";
+					condition = "true";
+					statement = "[""Air"", _player] call TAW_fnc_terminal_open";
+					position = [0,0,0];
+					distance = 2;
+					icon = "";
+				};
+			};
+        };
 	};
 
 	class TAW_Terminal_Car_Laptop: TAW_Terminal_Spawn_Laptop_Base {
@@ -106,7 +132,7 @@ class cfgVehicles
 
 		class UserActions: UserActions {
 			class OpenTerminal_GroundVehicle {
-				displayName = "<t color='#EEEEEE'>Ground Vehicle Terminal</t>";
+				displayName = "Open Ground Vehicle Terminal";
 				priority = 50;
 				radius = 7;
 				position = "interact";
@@ -118,6 +144,19 @@ class cfgVehicles
 				statement = "[""Car""] call TAW_fnc_terminal_open";
 			};
 		};
+
+		class ACE_Actions: ACE_Actions {
+			class ACE_MainActions: ACE_MainActions {
+				class OpenTerminal_GroundVehicle {
+					displayName = "Open Ground Vehicle Terminal";
+					condition = "true";
+					statement = "[""Car"", _player] call TAW_fnc_terminal_open";
+					position = [0,0,0];
+					distance = 2;
+					icon = "";
+				};
+			};
+        };
 	};
 
 	class TAW_Terminal_Boat_Laptop: TAW_Terminal_Spawn_Laptop_Base {
@@ -128,7 +167,7 @@ class cfgVehicles
 
 		class UserActions: UserActions {
 			class OpenTerminal_Boat {
-				displayName = "<t color='#EEEEEE'>Boat Terminal</t>";
+				displayName = "Open Boat Terminal";
 				priority = 50;
 				radius = 7;
 				position = "interact";
@@ -140,6 +179,19 @@ class cfgVehicles
 				statement = "[""Boat""] call TAW_fnc_terminal_open";
 			};
 		};
+
+		class ACE_Actions: ACE_Actions {
+			class ACE_MainActions: ACE_MainActions {
+				class OpenTerminal_Boat {
+					displayName = "Open Boat Terminal";
+					condition = "true";
+					statement = "[""Boat"", _player] call TAW_fnc_terminal_open";
+					position = [0,0,0];
+					distance = 2;
+					icon = "";
+				};
+			};
+        };
 	};
 
 	class Sign_Arrow_Yellow_F;
