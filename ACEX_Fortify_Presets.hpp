@@ -4,6 +4,7 @@ class ACEX_Fortify_Presets {
         objects[] = {
             {"Land_BagFence_Long_F", 50},
             {"Land_BagFence_Round_F", 50},
+            {"Land_BagBunker_Small_F", 200}
         };
     };
     class TAW_FOB_Barriers {
@@ -29,7 +30,7 @@ class ACEX_Fortify_Presets {
             {"Land_BarGate_F", 100},
             {"Land_BagFence_Long_F", 50},
             {"Land_BagFence_Round_F", 50},
-            {"Land_BagBunker_Small_F", 300},
+            {"Land_BagBunker_Small_F", 200},
         };
     };
     class TAW_FOB_Special {
@@ -63,9 +64,7 @@ class ACEX_Fortify_Presets {
             {"Land_BarGate_F", 100, "TAW_FOB_Misc"},
             {"Land_BagFence_Long_F", 50, "TAW_FOB_Misc"},
             {"Land_BagFence_Round_F", 50, "TAW_FOB_Misc"},
-            {"Land_BagBunker_Small_F", 300, "TAW_FOB_Misc"},
-            {"Land_BagFence_Round_F", 50, "TAW_FOB_Misc"},
-            {"Land_BagBunker_Small_F", 300, "TAW_FOB_Misc"},
+            {"Land_BagBunker_Small_F", 200, "TAW_FOB_Misc"},
             //Special FOB Items
             {"TAW_Terminal_Air_Laptop", 300, "TAW_FOB_Special"},
             {"TAW_Terminal_Car_Laptop", 300, "TAW_FOB_Special"},
@@ -76,6 +75,7 @@ class ACEX_Fortify_Presets {
             //Field Building (Doesn't require FOB nearby)
             {"Land_BagFence_Long_F", 50, "TAW_FIELD"},
             {"Land_BagFence_Round_F", 50, "TAW_FIELD"},
+            {"Land_BagBunker_Small_F", 200, "TAW_FIELD"}
         };
     };
 };
