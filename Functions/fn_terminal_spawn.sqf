@@ -29,7 +29,7 @@ if (count _spawn_locations <= 0) exitWith {systemChat "There are no spawn locati
 
 private _valid_spawn_locations = [];
 {
-	private _vehicles_nearby = nearestObjects [getPos _x, ["LandVehicle","Air","Ship"], 12];
+	private _vehicles_nearby = nearestObjects [getPosASL _x, ["LandVehicle","Air","Ship"], 12];
 
 	if (count _vehicles_nearby == 0) then {
 		_valid_spawn_locations append [_x];
@@ -41,7 +41,7 @@ if (count _valid_spawn_locations <= 0) exitWith {systemChat "There are no valid 
 
 //Select the first valid spawn location.
 private _spawn = _valid_spawn_locations select 0;
-private _spawn_position = getPos _spawn;
+private _spawn_position = getPosASL _spawn;
 private _spawn_direction = direction _spawn;
 
 //Check again to make sure the spawn point doesn't have a vehicle on it, if it does then stop the spawn.
@@ -57,7 +57,12 @@ if ((_budget != -1) and (_newBudget < 0)) exitWith {systemChat "You do not have 
 //Create the vehicle.
 _vehicle = _className createVehicle _spawn_position;
 _vehicle allowDamage false;
-_vehicle setPos _spawn_position; //Make sure it gets set onto the position.
+
+//Adds the height to spawn position.
+// _vehicleBoundingBox = _vehicle call BIS_fnc_boundingBoxDimensions;
+// _vehicleHeight = _vehicleBoundingBox select 2;
+// _vehicle setPosASL  [_spawn_position select 0, _spawn_position select 1, (_spawn_position select 2) + (_vehicleHeight/2)];
+_vehicle setPosASL _spawn_position ; //Make sure it gets set onto the position.
 _vehicle setDir _spawn_direction; //Set the vehicles direction the same as the marker.
 
 // Check if the vehicle is a UAV in config, if so create a crew for it.
