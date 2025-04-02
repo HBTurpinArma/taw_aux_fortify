@@ -14,7 +14,7 @@
     
     // Check if the object is a fob object, if so check for nearby FOBs
     private _fieldObjects = [
-        "Land_BagFence_Long_F", "Land_BagFence_Round_F"
+        "Land_BagFence_Long_F", "Land_BagFence_Round_F", "Land_BagBunker_Small_F"
     ];
     
     if (!(typeOf _object in _fieldObjects)) then {
