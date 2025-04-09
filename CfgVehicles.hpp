@@ -241,20 +241,86 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 3;
+		
+		//Ace Cargo Size
+  		ace_cargo_size = 2;  
+        ace_cargo_canLoad = 1; 
+        ace_cargo_noRename = 1;
+
+		//Allow Ace Dragging
+		ace_dragging_canDrag = 1;
+        ace_dragging_dragPosition[] = {0, 1.5, 0};  
+        ace_dragging_dragDirection = 0;  
+        ace_dragging_ignoreWeight = 1; 
+
+		//Allow Ace Carry
+	 	ace_dragging_canCarry = 1;
+        ace_dragging_carryPosition[] = {0, 1.2, 0};  
+        ace_dragging_carryDirection = 0; 
+        ace_dragging_ignoreWeightCarry = 1; 
+
+		//Event Handlers
+		class EventHandlers {
+			init = "(_this select 0) setVariable [""carry_force_disable"", true, true];";
+		};
 	};
 	class TAW_Supplies_Box: CargoNet_01_box_F {
 		displayName = "Supplies (Box) [TAW]";
 		scope = 2;
 		scopeCurator = 2;
 		side = 3;
+
+		//Ace Cargo Size
+  		ace_cargo_size = 2;  
+        ace_cargo_canLoad = 1; 
+        ace_cargo_noRename = 1;
+
+		//Allow Ace Dragging
+		ace_dragging_canDrag = 1;
+        ace_dragging_dragPosition[] = {0, 1.5, 0};  
+        ace_dragging_dragDirection = 0;  
+        ace_dragging_ignoreWeight = 1; 
+
+		//Allow Ace Carry
+	 	ace_dragging_canCarry = 1;
+        ace_dragging_carryPosition[] = {0, 1.2, 0};  
+        ace_dragging_carryDirection = 0; 
+        ace_dragging_ignoreWeightCarry = 1; 		
+		
+		//Event Handlers
+		class EventHandlers {
+			init = "(_this select 0) setVariable [""carry_force_disable"", true, true];";
+		};
 	};
 	class TAW_Supplies_Ammo: B_CargoNet_01_ammo_F {
 		displayName = "Supplies (Ammo) [TAW]";
 		scope = 2;
 		scopeCurator = 2;
 		side = 3;
+
+		//Ace Cargo Size
+  		ace_cargo_size = 2;  
+        ace_cargo_canLoad = 1; 
+        ace_cargo_noRename = 1;
+
+		//Allow Ace Dragging
+	 	ace_dragging_canDrag = 1;
+        ace_dragging_dragPosition[] = {0, 1.5, 0};  
+        ace_dragging_dragDirection = 0;  
+        ace_dragging_ignoreWeight = 1; 
+
+		//Allow Ace Carry
+	 	ace_dragging_canCarry = 1;
+        ace_dragging_carryPosition[] = {0, 1.2, 0};  
+        ace_dragging_carryDirection = 0; 
+        ace_dragging_ignoreWeightCarry = 1; 
+
+		//Event Handlers
+		class EventHandlers {
+			init = "(_this select 0) setVariable [""carry_force_disable"", true, true];";
+		};
 	};
-	
+
 	//Resupply Crates
 	class Box_NATO_Ammo_F;
 	class Box_NATO_Support_F;
