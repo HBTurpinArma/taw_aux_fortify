@@ -202,14 +202,27 @@ class cfgVehicles
 		side = 3;
 	};
 
-	class TAW_Terminal_Car_Spawn: Sign_Arrow_Yellow_F {
+	class Sign_Arrow_Green_F;
+	class TAW_Terminal_Car_Spawn: Sign_Arrow_Green_F {
 		displayName = "Ground Vehicle Spawn Point [TAW]";
 		scope = 2;
 		scopeCurator = 2;
 		side = 3;
+
+		// class ACE_Actions {
+		// 	class ACE_MainActions {
+		// 		class Remove {
+		// 			displayName = "Remove Spawnpoint";
+		// 			condition = "";
+		// 			statement = "";
+		// 			icon = "";
+		// 		};
+		// 	};
+        // };
 	};
 
-	class TAW_Terminal_Boat_Spawn: Sign_Arrow_Yellow_F {
+	class Sign_Arrow_Cyan_F;
+	class TAW_Terminal_Boat_Spawn: Sign_Arrow_Cyan_F {
 		displayName = "Boat Spawn Point [TAW]";
 		scope = 2;
 		scopeCurator = 2;
