@@ -346,7 +346,8 @@ class cfgVehicles
 
 	class TAW_Resupply_ACEArsenal: B_supplyCrate_F {
 		displayName="Resupply Crate [TAW]";
-		
+		hiddenSelectionsTextures[] = {"\TAW_AUX_FORTIFY\Data\Textures\supplydrop_taw_co.paa"};
+
 		//Ace Cargo Size
   		ace_cargo_size = 6;  
         ace_cargo_canLoad = 1; 
