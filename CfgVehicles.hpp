@@ -371,7 +371,47 @@ class cfgVehicles
 
 		//Event Handlers
 		class EventHandlers {
-			init = "(_this select 0) call TAW_fnc_resupply_init";
+			init = "[(_this select 0), true] call TAW_fnc_resupply_init";
+		};
+	};
+
+	//Taru version
+	// class Land_Pod_Heli_Transport_04_box_F;
+	// class Land_Pod_Heli_Transport_04_resupply_F: Land_Pod_Heli_Transport_04_box_F {
+	// 	//Event Handlers
+	// 	class EventHandlers {
+	// 		init = "[(_this select 0), true] call TAW_fnc_resupply_init";
+	// 	};
+	// };
+
+	class TAW_Full_ACEArsenal: B_supplyCrate_F {
+		displayName="Arsenal Crate [TAW]";
+		hiddenSelectionsTextures[] = {"\TAW_AUX_FORTIFY\Data\Textures\supplydrop_taw_co.paa"};
+
+		//Ace Cargo Size
+  		ace_cargo_size = 10;  
+        ace_cargo_canLoad = 0; 
+        ace_cargo_noRename = 1;
+        ace_cargo_blockUnloadCarry = 1;
+
+		//Allow Ace Dragging
+	 	ace_dragging_canDrag = 1;
+        ace_dragging_dragPosition[] = {0, 1.5, 0};  
+        ace_dragging_dragDirection = 0;  
+        ace_dragging_ignoreWeight = 1; 
+
+		//Disallow Ace Carry
+		ace_dragging_canCarry = 0;
+
+		//Empty Cargo
+		class TransportBackpacks {};
+		class TransportWeapons {};
+		class TransportItems {};
+		class TransportMagazines {};
+
+		//Event Handlers
+		class EventHandlers {
+			init = "[(_this select 0), false] call TAW_fnc_resupply_init";
 		};
 	};
 };

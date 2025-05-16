@@ -70,7 +70,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		"TAW_VehicleSpawner_Air_List", "EDITBOX", 
 		["Air Assets", "Enter list of vehicles/objects that should be spawnable at the aircraft terminal. Example: [[""FIR_AV8B"",500],[""Valor_Turret_Transport_CrewGun_F"",200]]"], 
 		["TAW", "Vehicle Terminal Settings"], 
-		"[[""FIR_AV8B"",500],[""RHSGREF_A29B_HIDF"",300],[""USAF_A10"",600],[""USAF_F22"",550],[""USAF_F35A"",700],[""ua_haf_jas_39"",450],[""rhs_l159_cdf_b_CDF"",350],[""JK_B_US_C5M_Super_Galaxy_F"",700],[""USAF_C130J"",600],[""RHS_UH60M_d"",225],[""B_Heli_Transport_01_F"",225],[""RHS_MELB_MH6M"",175],[""RHS_MELB_AH6M"",275],[""RHS_CH_47F_10"",300],[""B_Heli_Transport_03_F"",300],[""RHS_AH64D"",600],[""B_Heli_Attack_01_dynamicLoadout_F"",400],[""RHS_AH1Z"",450],[""Valor_Turret_Transport_CrewGun_F"",350],[""Valor_Attack_F"",400],[""Valor_Transport_Armed_F"",275],[""B_T_VTOL_01_infantry_F"",250],[""B_T_VTOL_01_vehicle_F"",250],[""B_T_VTOL_01_armed_F"",400]]",
+		"[[""B_Plane_Fighter_01_F"",500],[""FIR_AV8B"",500],[""RHSGREF_A29B_HIDF"",300],[""USAF_A10"",600],[""USAF_F22"",550],[""USAF_F35A"",700],[""ua_haf_jas_39"",450],[""rhs_l159_cdf_b_CDF"",350],[""JK_B_US_C5M_Super_Galaxy_F"",700],[""USAF_C130J"",600],[""RHS_UH60M_d"",225],[""B_Heli_Transport_01_F"",225],[""RHS_MELB_MH6M"",175],[""RHS_MELB_AH6M"",275],[""rhsusf_CH53E_USMC"",350],[""RHS_CH_47F_10"",300],[""B_Heli_Transport_03_F"",300],[""RHS_AH64D"",600],[""B_Heli_Attack_01_dynamicLoadout_F"",400],[""RHS_AH1Z"",450],[""Valor_Turret_Transport_CrewGun_F"",350],[""Valor_Attack_F"",400],[""Valor_Transport_Armed_F"",275],[""B_T_VTOL_01_infantry_F"",250],[""B_T_VTOL_01_vehicle_F"",250],[""B_T_VTOL_01_armed_F"",400],[""B_Heli_Transport_04_F"",200]]",
 		0, 
 		{params["_value"]; TAW_VehicleSpawner_Air_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;
@@ -125,7 +125,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		"TAW_VehicleSpawner_Support_List", "EDITBOX", 
 		["Support Assets", "Enter list of support objects that should be spawnable at a terminal. Example: [[""B_Truck_01_FOB_F"",500],[""B_Slingload_01_FOB_F"",500]]"], 
 		["TAW", "Vehicle Terminal Settings"], 
-		"[[""B_Truck_01_FOB_F"",800],[""B_Slingload_01_FOB_F"",800],[""B_Slingload_01_Medevac_F"",500],[""TAW_Resupply_ACEArsenal"",50],[""B_Truck_01_fuel_F"",500],[""B_Truck_01_ammo_F"",500]]",
+		"[[""B_Truck_01_FOB_F"",800],[""B_Slingload_01_FOB_F"",800],[""B_Slingload_01_Medevac_F"",250],[""TAW_Resupply_ACEArsenal"",50],[""B_Truck_01_fuel_F"",250],[""B_Truck_01_ammo_F"",250],[""Land_Pod_Heli_Transport_04_bench_black_F"",50],[""Land_Pod_Heli_Transport_04_covered_black_F"",75],[""Land_Pod_Heli_Transport_04_medevac_black_F"",75],[""Land_Pod_Heli_Transport_04_fuel_black_F"",200],[""Land_Pod_Heli_Transport_04_repair_black_F"",200],[""Land_Pod_Heli_Transport_04_ammo_black_F"",200]]",
 		0, 
 		{params["_value"]; TAW_VehicleSpawner_Support_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;
