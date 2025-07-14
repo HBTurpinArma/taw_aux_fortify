@@ -42,41 +42,14 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		{params["_value"]; TAW_VehicleSpawner_Spawn_Cost = _value;}
 	] call CBA_fnc_addSetting;
 
-	// FIR_AV8B
-	// Valor_Turret_Transport_CrewGun_F
-	// Valor_Attack_F
-	// Valor_Transport_Armed_F
-	// B_T_VTOL_01_infantry_F
-	// B_T_VTOL_01_vehicle_F
-	// B_T_VTOL_01_armed_F
-	// JK_B_US_C5M_Super_Galaxy_F
-	// RHSGREF_A29B_HIDF
-	// USAF_A10
-	// USAF_C130J
-	// USAF_F22
-	// USAF_F35A
-	// RHS_UH60M_d
-	// RHS_CH_47F_10
-	// B_Heli_Transport_03_F
-	// RHS_AH64D
-	// B_Heli_Attack_01_dynamicLoadout_F
-	// RHS_MELB_MH6M
-	// RHS_MELB_AH6M
-	// ua_haf_jas_39
-	// rhs_l159_cdf_b_CDF
-	// B_Heli_Transport_01_F
-
 	[
 		"TAW_VehicleSpawner_Air_List", "EDITBOX", 
 		["Air Assets", "Enter list of vehicles/objects that should be spawnable at the aircraft terminal. Example: [[""FIR_AV8B"",500],[""Valor_Turret_Transport_CrewGun_F"",200]]"], 
 		["TAW", "Vehicle Terminal Settings"], 
-		"[[""B_Plane_Fighter_01_F"",500],[""FIR_AV8B"",500],[""RHSGREF_A29B_HIDF"",300],[""USAF_A10"",600],[""USAF_F22"",550],[""USAF_F35A"",700],[""ua_haf_jas_39"",450],[""rhs_l159_cdf_b_CDF"",350],[""JK_B_US_C5M_Super_Galaxy_F"",700],[""USAF_C130J"",600],[""RHS_UH60M_d"",225],[""B_Heli_Transport_01_F"",225],[""RHS_MELB_MH6M"",175],[""RHS_MELB_AH6M"",275],[""rhsusf_CH53E_USMC"",350],[""RHS_CH_47F_10"",300],[""B_Heli_Transport_03_F"",300],[""RHS_AH64D"",600],[""O_Heli_Attack_02_dynamicLoadout_F"",600],[""B_Heli_Attack_01_dynamicLoadout_F"",400],[""RHS_AH1Z"",450],[""Valor_Turret_Transport_CrewGun_F"",350],[""Valor_Attack_F"",400],[""Valor_Transport_Armed_F"",275],[""B_T_VTOL_01_infantry_F"",250],[""B_T_VTOL_01_vehicle_F"",250],[""B_T_VTOL_01_armed_F"",400],[""B_Heli_Transport_04_F"",200]]",
+		"[[""B_Plane_Fighter_01_F"",500],[""FIR_AV8B"",500],[""RHSGREF_A29B_HIDF"",300],[""USAF_A10"",600],[""USAF_F22"",550],[""USAF_F35A"",700],[""ua_haf_jas_39"",450],[""rhs_l159_cdf_b_CDF"",350],[""JK_B_US_C5M_Super_Galaxy_F"",700],[""USAF_C130J"",600],[""RHS_UH60M_d"",225],[""B_Heli_Transport_01_F"",225],[""RHS_MELB_MH6M"",175],[""RHS_MELB_AH6M"",275],[""rhsusf_CH53E_USMC"",350],[""RHS_CH_47F_10"",300],[""B_Heli_Transport_03_F"",300],[""RHS_AH64D"",600],[""O_Heli_Attack_02_dynamicLoadout_F"",600],[""B_Heli_Attack_01_dynamicLoadout_F"",400],[""RHS_AH1Z"",450],[""Valor_Turret_Transport_CrewGun_F"",350],[""Valor_Attack_F"",400],[""Valor_Transport_Armed_F"",275],[""B_T_VTOL_02_infantry_dynamicLoadout_F"",500],[""B_T_VTOL_02_vehicle_dynamicLoadout_F"",500],[""B_T_VTOL_01_infantry_F"",250],[""B_T_VTOL_01_vehicle_F"",250],[""B_T_VTOL_01_armed_F"",400],[""B_Heli_Transport_04_F"",200]]",
 		0, 
 		{params["_value"]; TAW_VehicleSpawner_Air_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;
-
-	// B_LSV_02_armed_F_custom_recon
-	// B_Quadbike_01_F
 
 	[
 		"TAW_VehicleSpawner_Car_List", "EDITBOX", 
@@ -87,11 +60,6 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		{params["_value"]; TAW_VehicleSpawner_Car_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;
 
-	// B_Boat_Transport_01_F
-	// B_Boat_Armed_01_miningun_F
-	// rhsusf_mkvsoc
-	// B_SDV_01_F
-
 	[
 		"TAW_VehicleSpawner_Boat_List", "EDITBOX", 
 		["Boat Assets", "Enter list of vehicles/objects that should be spawnable at the boat terminal. Example: [[""B_Boat_Transport_01_F"",50],[""B_Boat_Armed_01_miningun_F"",150]]"], 
@@ -100,13 +68,6 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		0, 
 		{params["_value"]; TAW_VehicleSpawner_Boat_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;
-
-	// USAF_MQ9
-	// USAF_RQ4A
-	// B_T_UAV_03_dynamicLoadout_F_mk2
-	// B_UAV_05_F_mk2
-	// B_UAV_02_dynamicLoadout_F_mk2
-	// B_UGV_01_rcws_F
 
 	[
 		"TAW_VehicleSpawner_Drone_List", "EDITBOX", 
@@ -117,10 +78,6 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		{params["_value"]; TAW_VehicleSpawner_Drone_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;
 
-	// B_Truck_01_FOB_F
-	// B_Slingload_01_FOB_F
-	// B_Slingload_01_Medevac_F
-
 	[
 		"TAW_VehicleSpawner_Support_List", "EDITBOX", 
 		["Support Assets", "Enter list of support objects that should be spawnable at a terminal. Example: [[""B_Truck_01_FOB_F"",500],[""B_Slingload_01_FOB_F"",500]]"], 
@@ -129,7 +86,6 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		0, 
 		{params["_value"]; TAW_VehicleSpawner_Support_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;
-
 
 	[
 		"TAW_Supplies_List", "EDITBOX", 
