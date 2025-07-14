@@ -15,6 +15,15 @@ _spawnClasses = switch(_vehicleClass) do
 	case "Armored": {["TAW_Terminal_Car_Spawn"]};
 	case "Autonomous": {["TAW_Terminal_Air_Spawn"]};
 	case "Support": {["TAW_Terminal_Air_Spawn"]};
+	case "rhs_vehclass_truck": {["TAW_Terminal_Car_Spawn"]};
+	case "rhs_vehclass_car": {["TAW_Terminal_Car_Spawn"]};
+	case "rhs_vehclass_tank": {["TAW_Terminal_Car_Spawn"]};
+	case "rhs_vehclass_ifv": {["TAW_Terminal_Car_Spawn"]};
+	case "rhs_vehclass_artillery": {["TAW_Terminal_Air_Spawn", "TAW_Terminal_Car_Spawn"]};
+	case "rhs_vehclass_apc": {["TAW_Terminal_Car_Spawn"]};
+	case "rhs_vehclass_MRAP": {["TAW_Terminal_Car_Spawn"]};
+	case "rhs_vehclass_aircraft": {["TAW_Terminal_Air_Spawn"]};
+	case "rhs_vehclass_helicopter": {["TAW_Terminal_Air_Spawn"]};
 	default {["TAW_Terminal_Air_Spawn", "TAW_Terminal_Car_Spawn"]};
 };
 
