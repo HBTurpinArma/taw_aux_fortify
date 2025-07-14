@@ -200,6 +200,38 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 3;
+		icon = "\A3\Misc_F\Helpers\data\ui\icons\Sign_Arrow_Yellow_F";
+		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Sign_Arrow_Yellow_F.jpg";
+		model = "\A3\Misc_F\Helpers\Sign_Arrow_F";
+		SLX_XEH_DISABLED = 0;
+
+
+		class ACE_Actions {
+			class ACE_MainActions {
+				class Remove_Spawnpoint {
+					displayName = "Remove Spawnpoint";
+					condition = "";
+					statement = "deleteVehicle _this";
+					icon = "";
+				};
+			};
+        };
+
+		class UserActions {
+			class Remove_Spawnpoint {
+				displayName = "Remove Spawnpoint";
+				priority = 50;
+				radius = 7;
+				position = "doplnovani";
+				showWindow = 0;
+				hideOnUse = 1;
+				onlyForPlayer = 0;
+				shortcut = "";
+				// condition = "player call ace_common_fnc_isEngineer";
+				condition = "true";
+				statement = "deleteVehicle this";
+			};
+		};
 	};
 
 	class Sign_Arrow_Green_F;
@@ -208,17 +240,37 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 3;
+		icon = "\A3\Misc_F\Helpers\data\ui\icons\Sign_Arrow_Green_F";
+		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Sign_Arrow_Green_F.jpg";
+		model = "\A3\Misc_F\Helpers\Sign_Arrow_F";
+		SLX_XEH_DISABLED = 0;
 
-		// class ACE_Actions {
-		// 	class ACE_MainActions {
-		// 		class Remove {
-		// 			displayName = "Remove Spawnpoint";
-		// 			condition = "";
-		// 			statement = "";
-		// 			icon = "";
-		// 		};
-		// 	};
-        // };
+		class ACE_Actions {
+			class ACE_MainActions {
+				class Remove_Spawnpoint {
+					displayName = "Remove Spawnpoint";
+					condition = "";
+					statement = "deleteVehicle _this";
+					icon = "";
+				};
+			};
+        };
+
+		class UserActions {
+			class Remove_Spawnpoint {
+				displayName = "Remove Spawnpoint";
+				priority = 50;
+				radius = 7;
+				position = "doplnovani";
+				showWindow = 0;
+				hideOnUse = 1;
+				onlyForPlayer = 0;
+				shortcut = "";
+				// condition = "player call ace_common_fnc_isEngineer";
+				condition = "true";
+				statement = "deleteVehicle this";
+			};
+		};
 	};
 
 	class Sign_Arrow_Cyan_F;
@@ -227,6 +279,38 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 3;
+		icon = "\A3\Misc_F\Helpers\data\ui\icons\Sign_Arrow_Cyan_F";
+		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Sign_Arrow_Cyan_F.jpg";
+		model = "\A3\Misc_F\Helpers\Sign_Arrow_F";
+		SLX_XEH_DISABLED = 0;
+
+
+		class ACE_Actions {
+			class ACE_MainActions {
+				class Remove_Spawnpoint {
+					displayName = "Remove Spawnpoint";
+					condition = "";
+					statement = "deleteVehicle _this";
+					icon = "";
+				};
+			};
+        };
+
+		class UserActions {
+			class Remove_Spawnpoint {
+				displayName = "Remove Spawnpoint";
+				priority = 50;
+				radius = 7;
+				position = "doplnovani";
+				showWindow = 0;
+				hideOnUse = 1;
+				onlyForPlayer = 0;
+				shortcut = "";
+				// condition = "player call ace_common_fnc_isEngineer";
+				condition = "true";
+				statement = "deleteVehicle this";
+			};
+		};
 	};
 
 	class Sign_Arrow_Blue_F;
@@ -235,6 +319,37 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 3;
+		icon = "\A3\Misc_F\Helpers\data\ui\icons\Sign_Arrow_Blue_F";
+		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Sign_Arrow_Blue_F.jpg";
+		model = "\A3\Misc_F\Helpers\Sign_Arrow_F";
+		SLX_XEH_DISABLED = 0;
+
+		class ACE_Actions {
+			class ACE_MainActions {
+				class Remove_Spawnpoint {
+					displayName = "Remove Spawnpoint";
+					condition = "";
+					statement = "deleteVehicle _this";
+					icon = "";
+				};
+			};
+        };
+
+		class UserActions {
+			class Remove_Spawnpoint {
+				displayName = "Remove Spawnpoint";
+				priority = 50;
+				radius = 7;
+				position = "doplnovani";
+				showWindow = 0;
+				hideOnUse = 1;
+				onlyForPlayer = 0;
+				shortcut = "";
+				// condition = "player call ace_common_fnc_isEngineer";
+				condition = "true";
+				statement = "deleteVehicle this";
+			};
+		};
 	};
 
 	//Supplies
