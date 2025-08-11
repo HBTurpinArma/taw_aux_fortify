@@ -51,13 +51,12 @@ class cfgVehicles
 
 	//Vehicle Terminals
 	class Land_Laptop_03_olive_F;
-
-
 	class TAW_Terminal_Spawn_Laptop_Base: Land_Laptop_03_olive_F {
 		displayName = "Useless Terminal [TAW]";
 		hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Equipment\data\Laptop_03_olive_CO.paa", ""};
 		scope = 0;
 		scopeCurator = 0;
+		side = 3;
 
 		class UserActions {
 			class OpenTerminal_CollectNearbySupplies {
@@ -120,6 +119,14 @@ class cfgVehicles
 					distance = 2;
 					icon = "";
 				};
+				class GOM_AircraftLoadout {
+                    displayName = "Edit Nearby Aircraft Loadouts";
+                    distance = 2;
+                    exceptions[] = {"isNotInside"};
+                    icon = "\z\ace\addons\rearm\ui\icon_rearm_interact.paa";
+                    condition = "true";
+                    statement = "[_player] spawn GOM_fnc_aircraftLoadout";
+                };
 			};
         };
 	};
