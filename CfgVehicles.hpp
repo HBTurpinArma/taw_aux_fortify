@@ -510,13 +510,34 @@ class cfgVehicles
 	};
 
 	//Taru version
-	// class Land_Pod_Heli_Transport_04_box_F;
-	// class Land_Pod_Heli_Transport_04_resupply_F: Land_Pod_Heli_Transport_04_box_F {
-	// 	//Event Handlers
-	// 	class EventHandlers {
-	// 		init = "[(_this select 0), true] call TAW_fnc_resupply_init";
-	// 	};
-	// };
+	class Land_Pod_Heli_Transport_04_ammo_F;
+	class Land_Pod_Heli_Transport_04_resupply_F: Land_Pod_Heli_Transport_04_ammo_F {
+		displayName="Taru Resupply Pod (Black) [TAW]";
+		scope = 2;
+		scopeCurator = 2;
+
+		//Empty Cargo
+		class TransportBackpacks {};
+		class TransportWeapons {};
+		class TransportItems {};
+		class TransportMagazines {};
+
+		//Event Handlers
+		class EventHandlers {
+			init = "[(_this select 0), true] call TAW_fnc_resupply_init";
+		};
+	};
+	class Land_Pod_Heli_Transport_04_FOB_F: Land_Pod_Heli_Transport_04_ammo_F {
+		displayName="Taru FOB Pod (Black) [TAW]";
+		scope = 2;
+		scopeCurator = 2;
+
+		//Empty Cargo
+		class TransportBackpacks {};
+		class TransportWeapons {};
+		class TransportItems {};
+		class TransportMagazines {};
+	};
 
 	class TAW_Full_ACEArsenal: B_supplyCrate_F {
 		displayName="Arsenal Crate [TAW]";
