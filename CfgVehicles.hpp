@@ -107,6 +107,18 @@ class cfgVehicles
 				condition = "true";
 				statement = "[""Air"", player] call TAW_fnc_terminal_open";
 			};
+			class GOM_AircraftLoadout {
+				displayName = "Edit Nearby Aircraft Loadouts";
+				priority = 49;
+				radius = 7;
+				position = "interact";
+				showWindow = 0;
+				hideOnUse = 1;
+				onlyForPlayer = 0;
+				shortcut = "";
+				condition = "true";
+				statement = "[player] spawn GOM_fnc_aircraftLoadout";
+			};
 		};
 
 		class ACE_Actions: ACE_Actions {
