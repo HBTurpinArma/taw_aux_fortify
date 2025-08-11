@@ -46,7 +46,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		"TAW_VehicleSpawner_Air_List", "EDITBOX", 
 		["Air Assets", "Enter list of vehicles/objects that should be spawnable at the aircraft terminal. Example: [[""FIR_AV8B"",500],[""Valor_Turret_Transport_CrewGun_F"",200]]"], 
 		["TAW", "Vehicle Terminal Settings"], 
-		"[[""B_Plane_Fighter_01_F"",500],[""FIR_AV8B"",500],[""RHSGREF_A29B_HIDF"",300],[""USAF_A10"",600],[""USAF_F22"",550],[""USAF_F35A"",700],[""ua_haf_jas_39"",450],[""rhs_l159_cdf_b_CDF"",350],[""JK_B_US_C5M_Super_Galaxy_F"",700],[""USAF_C130J"",600],[""RHS_UH60M_d"",225],[""B_Heli_Transport_01_F"",225],[""RHS_MELB_MH6M"",175],[""RHS_MELB_AH6M"",275],[""rhsusf_CH53E_USMC"",350],[""RHS_CH_47F_10"",300],[""B_Heli_Transport_03_F"",300],[""RHS_AH64D"",600],[""O_Heli_Attack_02_dynamicLoadout_F"",600],[""B_Heli_Attack_01_dynamicLoadout_F"",400],[""RHS_AH1Z"",450],[""Valor_Turret_Transport_CrewGun_F"",350],[""Valor_Attack_F"",400],[""Valor_Transport_Armed_F"",275],[""B_T_VTOL_02_infantry_dynamicLoadout_F"",500],[""B_T_VTOL_02_vehicle_dynamicLoadout_F"",500],[""B_T_VTOL_01_infantry_F"",250],[""B_T_VTOL_01_vehicle_F"",250],[""B_T_VTOL_01_armed_F"",400],[""B_Heli_Transport_04_F"",200]]",
+		"[[""B_Plane_Fighter_01_F"",500],[""FIR_AV8B"",500],[""RHSGREF_A29B_HIDF"",300],[""USAF_A10"",600],[""JS_JC_FA18E"",525],[""JS_JC_FA18F"",525],[""USAF_F22"",550],[""USAF_F35A"",700],[""ua_haf_jas_39"",450],[""rhs_l159_cdf_b_CDF"",350],[""JK_B_US_C5M_Super_Galaxy_F"",700],[""USAF_C130J"",600],[""RHS_UH60M_d"",225],[""B_Heli_Transport_01_F"",225],[""RHS_MELB_MH6M"",175],[""RHS_MELB_AH6M"",275],[""rhsusf_CH53E_USMC"",350],[""RHS_CH_47F_10"",300],[""B_Heli_Transport_03_F"",300],[""RHS_AH64D"",600],[""O_Heli_Attack_02_dynamicLoadout_F"",600],[""B_Heli_Attack_01_dynamicLoadout_F"",400],[""RHS_AH1Z"",450],[""Valor_Turret_Transport_CrewGun_F"",350],[""Valor_Attack_F"",400],[""Valor_Transport_Armed_F"",275],[""B_T_VTOL_02_infantry_dynamicLoadout_F"",500],[""B_T_VTOL_02_vehicle_dynamicLoadout_F"",500],[""B_T_VTOL_01_infantry_F"",250],[""B_T_VTOL_01_vehicle_F"",250],[""B_T_VTOL_01_armed_F"",400],[""B_Heli_Transport_04_F"",200]]",
 		0, 
 		{params["_value"]; TAW_VehicleSpawner_Air_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;
@@ -55,7 +55,7 @@ if(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
 		"TAW_VehicleSpawner_Car_List", "EDITBOX", 
 		["Ground Vehicle Assets", "Enter list of vehicles/objects that should be spawnable at the ground vehicle terminal. Example: [[""B_Quadbike_01_F"",50],[""B_LSV_02_armed_F_custom_recon"",100]]"], 
 		["TAW", "Vehicle Terminal Settings"], 
-		"[[""rhsusf_m1151_m2_v1_usarmy_d"",250],[""rhsusf_m1240a1_m240_uik_usarmy_d"",400],[""B_MRAP_01_F"",200],[""B_MRAP_01_hmg_F"",400],[""B_LSV_01_unarmed_F"",150],[""B_LSV_01_armed_F"",200],[""B_LSV_02_armed_F_custom_recon"",200],[""B_Quadbike_01_F"",100],[""B_Truck_01_transport_F"",300]]",
+		"[[""rhsusf_m1151_m2_v1_usarmy_d"",250],[""rhsusf_m1240a1_m240_uik_usarmy_d"",400],[""B_MRAP_01_F"",200],[""B_MRAP_01_hmg_F"",400],[""B_LSV_01_unarmed_F"",150],[""B_LSV_01_armed_F"",200],[""B_LSV_02_unarmed_F_custom_recon"",150],[""B_LSV_02_armed_F_custom_recon"",200],[""B_LSV_02_AT_F_custom_recon"",225],[""B_Quadbike_01_F"",100],[""B_Truck_01_transport_F"",300]]",
 		0, 
 		{params["_value"]; TAW_VehicleSpawner_Car_List = parseSimpleArray _value;}
 	] call CBA_fnc_addSetting;
